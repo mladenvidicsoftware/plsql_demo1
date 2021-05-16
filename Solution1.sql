@@ -5,6 +5,9 @@
    
    Note: Procedures and function could have shorter names. These names are used for self describing purposes for better readability 
    and easier following of code development pathway.
+   
+   LICENCE: The licensing rules from the 'license.txt' or '..\license.txt' file apply to this file, solution and its parts.
+
 */
 
 /*
