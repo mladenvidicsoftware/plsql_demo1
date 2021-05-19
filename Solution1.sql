@@ -40,12 +40,22 @@ Scope: Demonstration that shows the way how can be solved task described above.
  
 /* This type helps to implement operations with string lists needed in "sets"  attribute of visibility by Oracle VARRAY type.
 */
-create type &&DEMO_OWNER..MV_StringList_Type as 
+create type &&DEMO_OWNER..MV_StringList_Type 
+as 
    varray(50) of varchar2(50);
 /
-/* WARNING! - It has a restriction that the number of allowed elements in a shredding string is finite and each element can has the most 25 caracters.
-It is for demonstration purposes. In real production system it is better to use ASSOCIATEIVE VARRAY or NESTED TABLE types in Oracle
-that have no restriction to declared number of elements.
+
+/* WARNING! - It has a restriction that the number of allowed elements in a shredding string is finite and each element can has the most 50 characters.
+	It is for demonstration purposes. 
+	In real production system it is better to use ASSOCIATEIVE VARRAY or NESTED TABLE types in Oracle
+	that have no restriction to declared number of elements.
+
+	Example:
+	create or replace type &&DEMO_OWNER..MV_StringListTable_Type 
+	as 
+		TABLE OF VARCHAR2 (50);
+	/
+
 */
 
 CREATE OR REPLACE Package &&DEMO_OWNER..MV_string_utils IS
